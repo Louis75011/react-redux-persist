@@ -1,15 +1,51 @@
+:root {
+    --my-box: 5px 3px 4px #26619c;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
 form {
+    width: 40%;
+    padding: 2rem;
     background-color: lightgray;
+    border-radius: 1rem;
+    font-weight: 900;
+    box-shadow: var(--my-box);
+}
+
+.input-action {
+    text-align: center;
 }
 
 input {
-    
+
+    box-shadow: var(--my-box);
 }
 
 button {
+    padding: 0.3rem;
+    margin-left: 0.5rem;
+    background-color: #26619c;
+    box-shadow: var(--my-box);
+    color: #fff;
 
 }
 
 p {
+    text-align: center;
+    margin: 1rem 0;
+    color: #fff;
+}
 
+@media screen and (max-width: 800px) {
+    button {
+        margin-top: 0.3rem;
+    }
 }

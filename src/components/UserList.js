@@ -10,7 +10,7 @@ export default function UserList() {
 
   function handleAdd(e) {
     e.preventDefault()
-    if (name) {
+    if (name && name.length <= 25) {
         dispatch(addUser(name))
         setName("")
     }
@@ -22,12 +22,14 @@ export default function UserList() {
   }
 
   return (
-    <div>
+    <div className='app'>
         <form>
-            <input type="text" value={name} onChange={e => setName(e.target.value)} />
-            <button onClick={handleAdd}>Ajouter</button>
+            <div className='input-action'>
+                <input type="text" value={name} onChange={e => setName(e.target.value)} />
+                <button onClick={handleAdd}>Ajouter</button>
+            </div>
 
-            <div>
+            <div className='flex-column'>
                 {users.map((el, index) => {
                     return <p key={index}>{el} <button onClick={e => handleDelete(e, index)}>Suppression</button></p>
                 })}
