@@ -1,1 +1,2 @@
-React, redux, persist with git rebase test
+React, redux, persist, toolkit
+with git rebase test
